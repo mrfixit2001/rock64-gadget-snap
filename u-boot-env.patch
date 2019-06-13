@@ -1,0 +1,24 @@
+--- a/include/configs/rk3328_common.h
++++ b/include/configs/rk3328_common.h
+@@ -56,3 +56,6 @@
+ #define CONFIG_SYS_USB_OHCI_MAX_ROOT_PORTS	1
+ 
+ #endif
++
++#undef CONFIG_ENV_SIZE
++#define CONFIG_ENV_SIZE (128 * 1024)
+
+diff --git a/configs/evb-rk3328_defconfig b/configs/evb-rk3328_defconfig
+index 0d673b2..d5b6cf9 100644
+--- a/configs/evb-rk3328_defconfig
++++ b/configs/evb-rk3328_defconfig
+@@ -115,3 +115,8 @@ CONFIG_G_DNL_PRODUCT_NUM=0x330a
+ CONFIG_USE_TINY_PRINTF=y
+ CONFIG_SPL_TINY_MEMSET=y
+ CONFIG_ERRNO_STR=y
++CONFIG_ENV_IS_IN_FAT=y
++CONFIG_ENV_FAT_INTERFACE="mmc"
++CONFIG_ENV_FAT_DEVICE_AND_PART="1"
++CONFIG_ENV_FAT_FILE="uboot.env"
++CONFIG_SYS_REDUNDAND_ENVIRONMENT=y
+
