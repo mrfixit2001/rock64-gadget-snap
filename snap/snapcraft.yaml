@@ -54,3 +54,4 @@ parts:
       - gcc-aarch64-linux-gnu
       - html2text
       - wget
+      - swig
